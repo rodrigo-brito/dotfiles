@@ -1,0 +1,30 @@
+{
+	// Editor
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"editor.formatOnSave": true,
+	"extensions.ignoreRecommendations": false,
+	"terminal.integrated.fontFamily": "Source Code Pro for Powerline",
+	"git.autofetch": false,
+	"files.autoSave": "off",
+	"explorer.confirmDragAndDrop": false,
+	"editor.parameterHints": true,
+
+	// Golang
+	"go.buildOnSave": "workspace",
+	"go.lintOnSave": "package",
+	"go.vetOnSave": "package",
+	"go.buildFlags": [
+		"-i"
+	],
+	"go.useCodeSnippetsOnFunctionSuggest": true,
+	"go.docsTool": "gogetdoc",
+	"go.formatTool": "goimports",
+	"go.autocompleteUnimportedPackages": true,
+	"go.gotoSymbol.includeImports": true,
+
+	// Python
+	"[python]": {
+		"editor.formatOnSave": false
+	}
+}

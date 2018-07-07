@@ -10,6 +10,9 @@ source $ZSH/oh-my-zsh.sh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
 
+# Default user - Remove from prompt
+DEFAULT_USER=$USER
+
 # Plugins
 # WD - https://github.com/mfaerevaag/wd
 plugins=(git wd)
