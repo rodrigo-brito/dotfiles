@@ -8,11 +8,22 @@ whoseport() {
     lsof -i ":$1" | grep LISTEN
 }
 
-# Docker container exec
-# Use: dsh <container_id>
+# Docker container exec with fuzzy finder
 dsh() {
-	docker exec -ti $1 bash 2>/dev/null || \
-		docker exec -ti $1 sh
+    local CNT=$1
+    if [ -z $CNT ]; then
+        CNT=$(docker ps --format '{{.Names}}' | fzf);
+    fi
+    docker exec -ti $CNT bash 2>/dev/null || docker exec -ti $CNT sh
+}
+
+# Docker container log with fuzzy finder
+dlog() {
+    local CNT=$1
+    if [ -z $CNT ]; then
+        CNT=$(docker ps --format '{{.Names}}' | fzf);
+    fi
+    docker logs --tail=100 -f $CNT
 }
 
 # Golang Debugger - https://github.com/y0ssar1an/q
