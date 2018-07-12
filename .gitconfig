@@ -1,3 +1,38 @@
 [user]
 	name = Rodrigo Brito
 	email = rig.10@hotmail.com
+
+[github]
+	user = rodrigo-brito
+
+[core]
+	editor = vim
+	pager = diff-so-fancy | less --tabs=4 -RFX
+
+[alias]
+	st = status
+	co = checkout
+	rb = rebase
+	cm = commit -m
+	amend = commit --amend
+
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan

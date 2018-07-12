@@ -1,3 +1,15 @@
-init:
-	[ ! -f ~/.gitconfig ] && ln -s $(PWD)/.gitconfig ~/.gitconfig || echo "[GITCONFIG] SKIP" 
-	[ ! -f ~/.zshrc ] && ln -s $(PWD)/.zshrc ~/.zshrc && source  ~/.zshrc || echo "[ZSHRC] SKIP"
+git-install:
+	ln -sf `pwd`/.gitconfig ~/.gitconfig
+
+zsh-install:
+	ln -sf `pwd`/.zshrc ~/.zshrc
+	source  ~/.zshrc
+
+vim-install:
+	ln -sf pwd`/.vimrc ~/.vimrc
+	vim --noplugin +PlugInstall +qall
+
+install: \
+	git-install \
+	zsh-install \
+	vim-install
