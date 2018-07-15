@@ -6,7 +6,8 @@ zsh-install:
 	source  ~/.zshrc
 
 vim-install:
-	ln -sf pwd`/.vimrc ~/.vimrc
+	ln -sf `pwd`/.vimrc ~/.vimrc
+	ln -sf `pwd`/.vimrc.local ~/.vimrc.local
 	vim --noplugin +PlugInstall +qall
 
 install: \

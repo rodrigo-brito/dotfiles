@@ -25,11 +25,11 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Autojumpt - https://github.com/wting/autojump
-([[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh) || \
-    [ -f /usr/local/etc/profile.d/autojump.sh ] && source /usr/local/etc/profile.d/autojump.sh
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
+autoload -U compinit && compinit -u
 
 # Autosugestion
 [ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Local settings
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local || true
