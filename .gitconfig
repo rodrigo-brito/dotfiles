@@ -13,7 +13,8 @@
 	st = status
 	co = checkout
 	rb = rebase
-	cm = commit -m
+    cm = commit -m
+    ru = remote update
 	amend = commit --amend
 
 [color]
