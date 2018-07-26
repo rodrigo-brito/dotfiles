@@ -32,4 +32,4 @@ autoload -U compinit && compinit -u
 [ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Local settings
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local || true
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local

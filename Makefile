@@ -9,6 +9,8 @@ vim-install:
 	ln -sf `pwd`/.vimrc ~/.vimrc
 	ln -sf `pwd`/.vimrc.local ~/.vimrc.local
 	vim --noplugin +PlugInstall +qall
+vscode-linux:
+	ln -sf `pwd`/vscode/settings.json ~/.config/Code/User/settings.json
 
 install: \
 	git-install \

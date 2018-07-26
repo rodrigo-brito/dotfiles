@@ -4,12 +4,13 @@
 	"editor.insertSpaces": false,
 	"editor.formatOnSave": true,
 	"extensions.ignoreRecommendations": false,
-	"terminal.integrated.fontFamily": "Source Code Pro for Powerline",
 	"git.autofetch": false,
 	"files.autoSave": "off",
 	"explorer.confirmDragAndDrop": false,
 	"editor.parameterHints": true,
-
+	// Terminal
+	"terminal.integrated.fontFamily": "Fira Code",
+	"terminal.integrated.lineHeight": 1.1,
 	// Golang
 	"go.buildOnSave": "workspace",
 	"go.lintOnSave": "package",
@@ -22,7 +23,6 @@
 	"go.formatTool": "goimports",
 	"go.autocompleteUnimportedPackages": true,
 	"go.gotoSymbol.includeImports": true,
-
 	// Python
 	"[python]": {
 		"editor.formatOnSave": false
