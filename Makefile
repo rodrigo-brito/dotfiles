@@ -1,5 +1,6 @@
 git-install:
 	ln -sf `pwd`/.gitconfig ~/.gitconfig
+	ln -sf `pwd`/.gitignore_global ~/.gitignore_global
 
 zsh-install:
 	ln -sf `pwd`/.zshrc ~/.zshrc

@@ -8,6 +8,7 @@
 [core]
 	editor = vim
 	pager = diff-so-fancy | less --tabs=4 -RFX
+	excludesfile = /home/rodrigo/.gitignore_global
 
 [alias]
 	st = status
