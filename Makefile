@@ -21,7 +21,8 @@ install-linux-softwares:
 		vim \
 		fonts-powerline \
 		ruby-full \
-		htop
+		htop \
+		byobu
 
 install: \
 	git-install \
