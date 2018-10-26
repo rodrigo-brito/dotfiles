@@ -38,3 +38,15 @@ rmqq() {
     fi
     qq
 }
+
+# Fetch a git pull request
+# Usage: gpr origin 666
+fpr() {
+    git fetch $1 "pull/$2/head:pull-$2" && git co "pull-$2"
+}
+
+# Dot files reload
+dfr() {
+    echo "reloading..."
+    source ~/.zshrc
+}

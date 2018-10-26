@@ -20,7 +20,8 @@ install-linux-softwares:
 		zsh \
 		vim \
 		fonts-powerline \
-		ruby-full
+		ruby-full \
+		htop
 
 install: \
 	git-install \
