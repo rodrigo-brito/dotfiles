@@ -1,13 +1,16 @@
 {
   // Editor
   "editor.tabSize": 4,
-  "editor.insertSpaces": false,
   "editor.formatOnSave": true,
   "extensions.ignoreRecommendations": false,
   "git.autofetch": false,
   "files.autoSave": "off",
   "explorer.confirmDragAndDrop": false,
-  "editor.parameterHints": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true
+  },
   // Terminal
   "terminal.integrated.fontFamily": "Fira Code",
   "terminal.integrated.lineHeight": 1.1,
@@ -25,5 +28,8 @@
   // Python
   "[python]": {
     "editor.formatOnSave": false
-  }
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.insertSpaces": false,
+  "editor.renderWhitespace": "all",
 }

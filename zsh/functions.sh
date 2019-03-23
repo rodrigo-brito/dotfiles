@@ -29,12 +29,22 @@ dlog() {
 # Golang Debugger - https://github.com/y0ssar1an/q
 qq() {
     clear
-    local gpath="${GOPATH:-$HOME/go}"
-    "${gpath%%:*}/src/github.com/y0ssar1an/q/q.sh" "$@"
+
+    logpath="$TMPDIR/q"
+    if [[ -z "$TMPDIR" ]]; then
+        logpath="/tmp/q"
+    fi
+
+    if [[ ! -f "$logpath" ]]; then
+        echo 'Q LOG' > "$logpath"
+    fi
+
+    tail -100f -- "$logpath"
 }
+
 rmqq() {
-    if [[ -f "/tmp/q" ]]; then
-        rm "/tmp/q"
+    if [[ -f "$TMPDIR/q" ]]; then
+        rm "$TMPDIR/q"
     fi
     qq
 }
