@@ -60,3 +60,17 @@ dfr() {
     echo "reloading..."
     source ~/.zshrc
 }
+
+gpo() {
+	if [[ "$#" != 0 ]] && [[ "$#" != 1 ]]
+	then
+		git push origin "${*}"
+	else
+		[[ "$#" == 0 ]] && local b="$(git_current_branch)" 
+		git push origin "${b:=$1}"
+	fi
+}
+
+gpof() {
+   gpo -f
+}

@@ -5,10 +5,13 @@
 # General
 # ----------------------
 alias lah="ls -lah"
+alias clear="printf '\033[2J\033[3J\033[1;1H'"
+
 
 # Git
 # ----------------------
 alias gru="git remote update"
+alias gbf='git checkout $(git branch --sort=-committerdate | fzf)'
 
 # Docker / Kubernetes
 # ----------------------

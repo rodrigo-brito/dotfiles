@@ -17,6 +17,7 @@
     cm = commit -m
     ru = remote update
 	amend = commit --amend
+    bo = branch --sort=-committerdate
 
 [color]
     branch = auto
@@ -39,14 +40,15 @@
     changed = green
     untracked = cyan
 
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
 [url "ssh://git@gitlab.com/"]
   insteadOf = https://gitlab.com/
 [url "ssh://git@bitbucket.org/"]
   insteadOf = https://bitbucket.org/
-[filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
