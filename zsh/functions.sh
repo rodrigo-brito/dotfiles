@@ -74,3 +74,14 @@ gpo() {
 gpof() {
    gpo -f
 }
+
+# Change Kubernetes namespace
+kns() {
+    namespace=$1
+    if [ -z $namespace ]; then
+        echo "Please provide the namespace name: 'change-ns mywebapp'"
+        return 1
+    fi
+
+    kubectl config set-context $(kubectl config current-context) --namespace $namespace
+}
