@@ -12,6 +12,7 @@ alias clear="printf '\033[2J\033[3J\033[1;1H'"
 # ----------------------
 alias gru="git remote update"
 alias gbf='git checkout $(git branch --sort=-committerdate | fzf)'
+alias gsf="git diff-tree --no-commit-id --name-only -r"
 
 # Docker / Kubernetes
 # ----------------------

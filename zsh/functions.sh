@@ -61,27 +61,27 @@ dfr() {
     source ~/.zshrc
 }
 
-gpo() {
-	if [[ "$#" != 0 ]] && [[ "$#" != 1 ]]
-	then
-		git push origin "${*}"
-	else
-		[[ "$#" == 0 ]] && local b="$(git_current_branch)" 
-		git push origin "${b:=$1}"
-	fi
-}
-
-gpof() {
-   gpo -f
-}
-
 # Change Kubernetes namespace
 kns() {
     namespace=$1
     if [ -z $namespace ]; then
-        echo "Please provide the namespace name: 'change-ns mywebapp'"
+        echo "Please, provide the namespace name: 'change-ns mywebapp'"
         return 1
     fi
 
     kubectl config set-context $(kubectl config current-context) --namespace $namespace
+}
+
+# Open a diff comparation between two urls
+diffjson() {
+    if [ -z $1 ] || [ -z $2 ]; then
+        echo "Please, provide two urls"
+        return 1
+    fi
+
+    curl -s "$1" | jq '.' > /tmp/1.json
+    curl -s "$2" | jq '.' > /tmp/2.json
+
+    # https://github.com/blazecolour/gendiff-cli
+    gendiff /tmp/1.json /tmp/2.json
 }
