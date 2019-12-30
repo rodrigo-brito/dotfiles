@@ -85,3 +85,9 @@ diffjson() {
     # https://github.com/blazecolour/gendiff-cli
     gendiff /tmp/1.json /tmp/2.json
 }
+
+# Decode a base64 string
+# Usage: d64 SGlnaGxpZ2h0OjQyMzI=
+d64() {
+    echo "$1" | base64 -d
+}

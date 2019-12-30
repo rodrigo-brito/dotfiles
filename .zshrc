@@ -7,6 +7,9 @@ source ~/dotfiles/zsh/variables.sh
 source ~/dotfiles/zsh/aliases.sh
 source ~/dotfiles/zsh/functions.sh
 
+HISTSIZE=10000
+HISTFILESIZE=2000
+
 # Themes
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
