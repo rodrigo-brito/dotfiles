@@ -1,7 +1,6 @@
 {
   // Editor
   "editor.tabSize": 4,
-  "editor.formatOnSave": true,
   "extensions.ignoreRecommendations": false,
   "git.autofetch": false,
   "files.autoSave": "off",
@@ -15,21 +14,86 @@
   "terminal.integrated.fontFamily": "Fira Code",
   "terminal.integrated.lineHeight": 1.1,
   // Golang
-  "go.buildOnSave": "workspace",
-  "go.lintOnSave": "package",
-  "go.vetOnSave": "package",
-  "go.buildFlags": ["-i"],
-  "go.useCodeSnippetsOnFunctionSuggest": true,
-  "go.docsTool": "gogetdoc",
-  "go.formatTool": "goimports",
+  // "go.buildOnSave": "workspace",
+  // "go.lintOnSave": "package",
+  // "go.vetOnSave": "package",
+  // "go.buildFlags": [
+  //   "-i"
+  // ],
+  // "go.formatTool": "goimports",
+  // "go.useCodeSnippetsOnFunctionSuggest": true,
+  // "go.docsTool": "gogetdoc",
   "go.autocompleteUnimportedPackages": true,
-  "go.gotoSymbol.includeImports": true,
-  "go.useLanguageServer": false,
-  // Python
-  "[python]": {
-    "editor.formatOnSave": false
+  "go.useLanguageServer": true,
+  "go.languageServerExperimentalFeatures": {
+    "format": true,
+    "diagnostics": true,
+    "documentLink": true
   },
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    // Optional: Disable snippets, as they conflict with completion ranking.
+    "editor.snippetSuggestions": "none"
+  },
+  "[go.mod]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "gopls": {
+    // Add parameter placeholders when completing a function.
+    "usePlaceholders": true,
+    // If true, enable additional analyses with staticcheck.
+    // Warning: This will significantly increase memory usage.
+    "staticcheck": true
+  },
+  // Python
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.insertSpaces": false,
   "editor.renderWhitespace": "all",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "python.jediEnabled": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "workbench.colorTheme": "Dracula Soft",
+  "files.associations": {
+    "*.tsx": "typescriptreact"
+  },
+  "python.languageServer": "Pylance",
+  // "[html]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "dart.previewLsp": true,
+  "[dart]": {
+    "editor.defaultFormatter": "Dart-Code.dart-code",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "window.zoomLevel": 1,
+  "editor.formatOnSave": true
 }
