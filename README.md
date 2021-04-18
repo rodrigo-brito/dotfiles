@@ -1,15 +1,23 @@
-# dotfiles
-My personal settings - Linux / Mac
+# Dotfiles
+
+My personal settings - Linux
+
+Current: Ubuntu 20.04 LTS
 
 ## Install
-`git clone git@github.com:rodrigo-brito/dotfiles.git ~/dotfiles`<br>
-`make install`
+- `sudo apt-get install git make`
+- `git clone git@github.com:rodrigo-brito/dotfiles.git ~/dotfiles`
+- `make install`
 
+## Fonts
+- https://github.com/tonsky/FiraCode
+- https://github.com/powerline/fonts
 
 ## Dependencies
 - https://github.com/robbyrussell/oh-my-zsh
 - https://github.com/zsh-users/zsh-autosuggestions
-- https://github.com/powerline/fonts
 - https://github.com/junegunn/fzf
 - https://github.com/wting/autojump
 - https://github.com/github/hub
+- https://github.com/so-fancy/diff-so-fancy
+- https://github.com/p-e-w/argos

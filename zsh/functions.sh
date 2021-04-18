@@ -49,12 +49,6 @@ rmqq() {
     qq
 }
 
-# Fetch a git pull request
-# Usage: gpr origin 666
-fpr() {
-    git fetch $1 "pull/$2/head:pull-$2" && git co "pull-$2"
-}
-
 # Dot files reload
 dfr() {
     echo "reloading..."
@@ -70,24 +64,4 @@ kns() {
     fi
 
     kubectl config set-context $(kubectl config current-context) --namespace $namespace
-}
-
-# Open a diff comparation between two urls
-diffjson() {
-    if [ -z $1 ] || [ -z $2 ]; then
-        echo "Please, provide two urls"
-        return 1
-    fi
-
-    curl -s "$1" | jq '.' > /tmp/1.json
-    curl -s "$2" | jq '.' > /tmp/2.json
-
-    # https://github.com/blazecolour/gendiff-cli
-    gendiff /tmp/1.json /tmp/2.json
-}
-
-# Decode a base64 string
-# Usage: d64 SGlnaGxpZ2h0OjQyMzI=
-d64() {
-    echo "$1" | base64 -d
 }
