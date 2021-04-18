@@ -1,7 +1,7 @@
 default:
 	@echo "linux-deps"
 	@echo "git-setup"
-	@echo "zsh-setup"
+	@echo "terminal-setup"
 	@echo "vim-setup"
 	@echo "vscode-setup"
 	@echo "tools-setup"
@@ -13,7 +13,7 @@ links-setup:
 	ln -sf `pwd`/.gitconfig ~/.gitconfig
 	ln -sf `pwd`/.gitignore_global ~/.gitignore_global
 
-zsh-setup:
+terminal-setup:
 	@echo "--- ZSH Setup --"
 	chsh -s $(which zsh)
 	touch ~/.zshrc.local
@@ -24,6 +24,8 @@ zsh-setup:
 		@git clone git://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh/zsh-autosuggestions
 	fi
 
+	@echo "-- Termiantor --"
+	ln -sf `pwd`/terminator/config ~/.config/terminator/config
 
 vim-setup:
 	@echo "--- Vim Setup --"
@@ -79,7 +81,7 @@ docker-setup:
 install: \
 	linux-deps \
 	git-setup \
-	zsh-setup \
+	terminal-setup \
 	vim-setup \
 	vscode-setup \
 	links-setup \
