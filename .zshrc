@@ -18,7 +18,7 @@ ZSH_THEME="agnoster"
 DEFAULT_USER=$USER
 
 # Plugins
-plugins=(git wd kubectl)
+plugins=(git wd kubectl autojump zsh-autosuggestions)
 
 # Oh My ZSH - https://github.com/robbyrussell/oh-my-zsh
 export ZSH=~/.oh-my-zsh
@@ -26,12 +26,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Fuzzy search - https://github.com/junegunn/fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Autojump - https://github.com/wting/autojump
-[[ -s /home/rodrigo/.autojump/etc/profile.d/autojump.sh ]] && source /home/rodrigo/.autojump/etc/profile.d/autojump.sh
-
-# Autosugestion
-[ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Local settings
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local

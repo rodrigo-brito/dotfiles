@@ -43,11 +43,8 @@ tools-setup:
 	~/.fzf/install
 
 linux-deps:
-	sudo add-apt-repository ppa:gnome-terminator
-	sudo apt-get update
-
 	@echo "--- Linux Dependencies --"
-	sudo apt install -y \
+	sudo apt update && sudo apt install -y \
 		build-essential \
 		curl \
 		nodejs \

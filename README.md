@@ -17,7 +17,6 @@ Current: Ubuntu 20.04 LTS
 - https://github.com/robbyrussell/oh-my-zsh
 - https://github.com/zsh-users/zsh-autosuggestions
 - https://github.com/junegunn/fzf
-- https://github.com/wting/autojump
 - https://github.com/github/hub
 - https://github.com/so-fancy/diff-so-fancy
 - https://github.com/p-e-w/argos
